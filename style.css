@@ -14,3 +14,21 @@ body {
   text-decoration: underline;
   text-decoration-color: #A46001;
 }
+
+#new-quote-button {
+  background-color: #762626;
+  color: #f2e9dc;
+  font-size: 30px;
+  font-weight: 100px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#quote {
+  font-size: 25px;
+  font-weight: 100px;
+  color: #010201;
+  text-align: center;
+}
