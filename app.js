@@ -22,13 +22,16 @@ async function getQuote() {
 }
   // create history
  
-  function addQuote(quote){
+function addQuote(quote){
   const ul = document.querySelector("#quote-history");
   const li = document.createElement("li");
   li.textContent = quote;
+
 // if statement that stops duplicates from being added
- if (ul.textContent.includes(quote)) { return; }
- else {
+
+ if (ul.textContent.includes(quote)) { 
+  return; 
+} else {
   ul.appendChild(li);
 }
   }
