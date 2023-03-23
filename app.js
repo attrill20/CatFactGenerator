@@ -18,11 +18,21 @@ async function getQuote() {
   const data = await response.json();
   console.log(data);
   document.querySelector("#quote").textContent = data.data[0];
-  // create history
-  const newListItem = document.createElement("li");
-  newListItem.textContent = data.data[0];
-  document.querySelector("#quote-history").appendChild(newListItem);
+  addQuote(data.data[0]);
 }
+  // create history
+ 
+  function addQuote(quote){
+  const ul = document.querySelector("#quote-history");
+  const li = document.createElement("li");
+  li.textContent = quote;
+// if statement that stops duplicates from being added
+ if (ul.textContent.includes(quote)) { return; }
+ else {
+  ul.appendChild(li);
+}
+  }
+
 
 //attach event.listener to new-quote-button
 
